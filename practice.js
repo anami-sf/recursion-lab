@@ -25,16 +25,26 @@ function factorial(num){
         return 1
     } else {
         return (num * factorial(num -1))
+    }   
+}
+console.log('2. factorial: ', factorial(4))
+
+// This function returns the Nth number in the fibonacci sequence.
+// https://en.wikipedia.org/wiki/Fibonacci_number
+function fibonacci(num, arr=[1,1]){
+    //The first two fibonacci numbers are 1 and 
+    if (num === 1) {
+        return 1
+    } else if(num === arr.length) {
+        return arr[arr.length-1]
+    } else {
+        const fib = arr[arr.length-1] + arr[arr.length-2]
+        arr.push(fib)
+        return fibonacci(num, arr)
     }
-    
 }
 
-console.log('2. factorial: ', factorial(4))
-// function fibonacci(){
-//     // This function returns the Nth number in the fibonacci sequence.
-//     // https://en.wikipedia.org/wiki/Fibonacci_number
-//     // For this function, the first two fibonacci numbers are 1 and 1
-// }
+console.log('3. fibonnaci: ', fibonacci(3))
 
 // function coinFlips(){
 //     // This function returns an array of all possible outcomes from flipping a coin N times.
