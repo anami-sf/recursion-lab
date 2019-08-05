@@ -14,16 +14,22 @@ function findMax(arr, idx=0, max=arr[0]){
         max = arr[idx]
     } 
     //increase arguments
-    idx++
-    return findMax(arr, idx, max)    
+    return findMax(arr, idx+1, max)    
 }
 let arr1 = [-5,-4, -18, -1]
-console.log(findMax(arr1))
+console.log('1. findMax: ', findMax(arr1))
 
-// function factorial(){
-//     // This function returns the factorial of a given number.
-// }
+// This function returns the factorial of a given number.
+function factorial(num){
+    if (num ===0 || num === 1) {
+        return 1
+    } else {
+        return (num * factorial(num -1))
+    }
+    
+}
 
+console.log('2. factorial: ', factorial(4))
 // function fibonacci(){
 //     // This function returns the Nth number in the fibonacci sequence.
 //     // https://en.wikipedia.org/wiki/Fibonacci_number
