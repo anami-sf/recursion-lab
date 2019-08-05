@@ -3,19 +3,21 @@
 // All functions must use recursion
 
 // This function returns the largest number in a given array.
-function findMax(arr, idx=0, max=0){
-    if (idx === (arr.length -1)){
+function findMax(arr, idx=0, max=arr[0]){
+    
+    if (idx === (arr.length)){
         return max
     }
     //recursive step
+
     if (arr[idx] >= max){
         max = arr[idx]
-    }
+    } 
     //increase arguments
     idx++
     return findMax(arr, idx, max)    
 }
-let arr1 = [5,4, 18, 1]
+let arr1 = [-5,-4, -18, -1]
 console.log(findMax(arr1))
 
 // function factorial(){
